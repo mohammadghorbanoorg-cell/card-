@@ -6,62 +6,135 @@
     <title>محمد قربانی | کارت ویزیت دیجیتال</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Tahoma, sans-serif; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Tahoma, 'Segoe UI', sans-serif; }
         
         body {
             background-image: url('profile.jpg');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
             background-attachment: fixed;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
-            background-color: #111;
+            background-color: #0b0f19;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(10, 15, 25, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 1;
         }
 
         .card {
-            background: rgba(0, 0, 0, 0.55);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 24px;
-            padding: 40px 25px;
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 32px;
+            padding: 35px 25px;
             width: 100%;
             max-width: 360px;
             text-align: center;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
         }
 
-        h1 { color: #ffffff; font-size: 26px; margin-bottom: 6px; text-shadow: 0 2px 4px rgba(0,0,0,0.6); }
-        p { color: #dddddd; font-size: 15px; margin-bottom: 30px; }
+        .avatar {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            margin: 0 auto 18px;
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+        }
 
-        .btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 15px; margin-bottom: 12px; border-radius: 14px; text-decoration: none; font-weight: bold; font-size: 15px; transition: 0.3s; }
-        
-        .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; }
-        .btn-green { background: #25d366; color: #000000; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); }
-        
-        .btn:hover { transform: translateY(-2px); opacity: 0.95; }
+        h1 { color: #ffffff; font-size: 26px; font-weight: bold; margin-bottom: 6px; }
+        p { color: #aaaaaa; font-size: 14px; margin-bottom: 25px; }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 12px 20px;
+            margin-bottom: 14px;
+            border-radius: 16px;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.2s ease;
+        }
+
+        .btn-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .btn-title { font-size: 16px; font-weight: bold; }
+        .btn-sub { font-size: 12px; opacity: 0.95; margin-top: 2px; direction: ltr; }
+
+        .btn-insta {
+            background: linear-gradient(90deg, #e6683c, #dc2743, #bc1888);
+            box-shadow: 0 6px 20px rgba(220, 39, 67, 0.35);
+        }
+
+        .btn-phone {
+            background: linear-gradient(90deg, #00e676, #00c853);
+            color: #000;
+            box-shadow: 0 6px 20px rgba(0, 230, 118, 0.35);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(90deg, #29b6f6, #0288d1);
+            color: #ffffff;
+            box-shadow: 0 6px 20px rgba(2, 136, 209, 0.35);
+        }
+
+        .btn i { font-size: 24px; }
+        .btn:hover { transform: scale(1.02); }
     </style>
 </head>
 <body>
+
+    <div class="overlay"></div>
+
     <div class="card">
+        <img src="profile.jpg" alt="محمد قربانی" class="avatar">
         <h1>محمد قربانی</h1>
         <p>مدیریت و بازرگانی</p>
         
         <a href="https://instagram.com/Mohammad.ghorbani_org2625" class="btn btn-insta" target="_blank">
-            <i class="fa-brands fa-instagram" style="font-size: 18px;"></i> اینستاگرام
+            <i class="fa-brands fa-instagram"></i>
+            <div class="btn-content">
+                <span class="btn-title">اینستاگرام</span>
+                <span class="btn-sub">@Mohammad.ghorbani_org2625</span>
+            </div>
         </a>
         
-        <a href="tel:09028390846" class="btn btn-green">
-            <i class="fa-solid fa-phone" style="font-size: 18px;"></i> تماس مستقیم
+        <a href="tel:09028390846" class="btn btn-phone">
+            <i class="fa-solid fa-phone"></i>
+            <div class="btn-content">
+                <span class="btn-title">تماس مستقیم</span>
+                <span class="btn-sub">09028390846</span>
+            </div>
         </a>
         
-        <a href="mailto:example@email.com" class="btn btn-green">
-            <i class="fa-solid fa-envelope" style="font-size: 18px;"></i> انتقادات و پیشنهادات
+        <a href="https://wa.me/989028390846" class="btn btn-whatsapp" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div class="btn-content">
+                <span class="btn-title">واتساپ</span>
+                <span class="btn-sub">09028390846</span>
+            </div>
         </a>
     </div>
+
 </body>
 </html>
