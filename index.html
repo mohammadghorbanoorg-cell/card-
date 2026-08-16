@@ -7,59 +7,78 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: Tahoma, sans-serif; }
-        html, body { width: 100%; height: 100%; overflow: hidden; }
+        
         body {
-            /* فراخوانی مستقیم عکس آپلود شده شما */
-            background-image: url('1786891565124.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background-color: #1a1a1a; /* رنگ پس‌زمینه تیره */
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-        .card {
-            width: 100vw;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
             padding: 20px;
+        }
+
+        /* کارت شیشه‌ای مرکزی */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 40px;
+            padding: 40px 25px;
+            width: 100%;
+            max-width: 400px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-        h1 { color: #fff; font-size: 32px; font-weight: bold; margin-bottom: 8px; text-shadow: 0 2px 10px rgba(0,0,0,0.8); }
-        p { color: #e0e0e0; font-size: 17px; margin-bottom: 40px; text-shadow: 0 2px 10px rgba(0,0,0,0.8); }
+
+        /* عکس پروفایل دایره‌ای */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid rgba(255,255,255,0.3);
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        h1 { color: #fff; font-size: 28px; margin-bottom: 5px; }
+        p { color: #ccc; font-size: 16px; margin-bottom: 30px; }
+
         .btn {
             display: flex;
             align-items: center;
             justify-content: space-between;
             width: 100%;
-            max-width: 380px;
-            padding: 18px 22px;
-            margin-bottom: 20px;
+            padding: 16px 20px;
+            margin-bottom: 15px;
             border-radius: 20px;
             text-decoration: none;
             color: white;
             font-weight: bold;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
         }
+
         .btn-content { display: flex; flex-direction: column; align-items: center; flex-grow: 1; }
-        .btn-title { font-size: 18px; }
-        .btn-sub { font-size: 13px; opacity: 0.95; margin-top: 3px; direction: ltr; }
-        .btn-insta { background: linear-gradient(90deg, #e6683c, #dc2743, #bc1888); }
-        .btn-phone { background: linear-gradient(90deg, #00e676, #00c853); color: #000; }
-        .btn-whatsapp { background: linear-gradient(90deg, #29b6f6, #0288d1); }
-        .btn i { font-size: 28px; }
+        .btn-title { font-size: 16px; }
+        .btn-sub { font-size: 12px; opacity: 0.8; margin-top: 2px; direction: ltr; }
+        .btn i { font-size: 24px; }
+
+        .btn-insta { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); }
+        .btn-phone { background: linear-gradient(135deg, #00e676, #00c853); color: #000; }
+        .btn-whatsapp { background: linear-gradient(135deg, #29b6f6, #0288d1); }
     </style>
 </head>
 <body>
-    <div class="card">
+
+    <div class="glass-card">
+        <!-- عکس شما که در گیت‌هاب آپلود کردید -->
+        <img src="background.png" alt="محمد قربانی" class="profile-img">
+        
         <h1>محمد قربانی</h1>
         <p>مدیریت و بازرگانی</p>
+        
         <a href="https://instagram.com/Mohammad.ghorbani_org2625" class="btn btn-insta" target="_blank">
             <i class="fa-brands fa-instagram"></i>
             <div class="btn-content">
@@ -67,6 +86,7 @@
                 <span class="btn-sub">@Mohammad.ghorbani_org2625</span>
             </div>
         </a>
+        
         <a href="tel:09028390846" class="btn btn-phone">
             <i class="fa-solid fa-phone"></i>
             <div class="btn-content">
@@ -74,6 +94,7 @@
                 <span class="btn-sub">09028390846</span>
             </div>
         </a>
+        
         <a href="https://wa.me/989028390846" class="btn btn-whatsapp" target="_blank">
             <i class="fa-brands fa-whatsapp"></i>
             <div class="btn-content">
@@ -82,5 +103,6 @@
             </div>
         </a>
     </div>
+
 </body>
 </html>
