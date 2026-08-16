@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محمد قربانی | کارت ویزیت دیجیتال</title>
+    <title>محمد قربانی</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
-        
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Tahoma, sans-serif; }
         body {
-            /* عکس شما به عنوان پس‌زمینه تمام صفحه */
             background-image: url('profile.jpg');
             background-size: cover;
             background-position: center;
@@ -18,53 +16,40 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
-            /* یک لایه تیره برای بهتر خوانده شدن متن */
-            background-color: rgba(0, 0, 0, 0.6);
-            background-blend-mode: darken;
+            background-color: #333;
         }
-
+        .overlay {
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+        }
         .card {
             background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 30px;
+            border-radius: 25px;
             padding: 40px 30px;
-            width: 100%;
-            max-width: 360px;
+            width: 90%;
+            max-width: 350px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-
-        h1 { color: #ffffff; font-size: 26px; margin-bottom: 5px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
-        p { color: #eeeeee; font-size: 15px; margin-bottom: 30px; }
-
-        .btn { display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; padding: 15px; margin-bottom: 12px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 16px; transition: 0.3s; }
-        
-        .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; }
-        .btn-green { background: #25d366; color: #000000; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3); }
-        
-        .btn:hover { transform: scale(1.02); opacity: 0.95; }
+        h1 { color: #fff; margin-bottom: 10px; }
+        p { color: #eee; margin-bottom: 30px; }
+        .btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 14px; margin-bottom: 15px; border-radius: 12px; text-decoration: none; font-weight: bold; color: white; transition: 0.3s; }
+        .btn-insta { background: linear-gradient(45deg, #f09433, #bc1888); }
+        .btn-green { background: #25d366; color: black; }
     </style>
 </head>
 <body>
+    <div class="overlay"></div>
     <div class="card">
         <h1>محمد قربانی</h1>
         <p>مدیریت و بازرگانی</p>
-        
-        <a href="https://instagram.com/Mohammad.ghorbani_org2625" class="btn btn-insta" target="_blank">
-            <i class="fa-brands fa-instagram"></i> اینستاگرام
-        </a>
-        
-        <a href="tel:09028390846" class="btn btn-green">
-            <i class="fa-solid fa-phone"></i> تماس مستقیم
-        </a>
-        
-        <a href="mailto:example@email.com" class="btn btn-green">
-            <i class="fa-solid fa-envelope"></i> انتقادات و پیشنهادات
-        </a>
+        <a href="https://instagram.com/Mohammad.ghorbani_org2625" class="btn btn-insta" target="_blank"><i class="fa-brands fa-instagram"></i> اینستاگرام</a>
+        <a href="tel:09028390846" class="btn btn-green"><i class="fa-solid fa-phone"></i> تماس مستقیم</a>
+        <a href="https://wa.me/989028390846" class="btn btn-green"><i class="fa-solid fa-envelope"></i> انتقادات و پیشنهادات</a>
     </div>
 </body>
 </html>
-
