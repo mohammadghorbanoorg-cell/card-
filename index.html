@@ -3,62 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>کارت ویزیت محمد قربانی</title>
+    <title>محمد قربانی | کارت ویزیت دیجیتال</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
         body {
-            font-family: Tahoma, sans-serif;
-            background-color: #121212;
-            color: #ffffff;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            margin: 0;
+            padding: 20px;
         }
         .card {
-            background-color: #1e1e1e;
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            padding: 40px 25px;
+            width: 100%;
+            max-width: 380px;
             text-align: center;
-            width: 85%;
-            max-width: 350px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        .avatar {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(45deg, #f09433, #bc1888);
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 38px;
+            color: white;
+            box-shadow: 0 8px 20px rgba(236, 40, 112, 0.3);
         }
         h1 {
+            color: #ffffff;
             font-size: 22px;
-            margin-bottom: 8px;
+            font-weight: 700;
+            margin-bottom: 6px;
         }
         p {
-            color: #aaa;
-            font-size: 14px;
-            margin-bottom: 25px;
+            color: #b3b3b3;
+            font-size: 13px;
+            margin-bottom: 30px;
         }
         .btn {
-            display: block;
-            background: #25d366;
-            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border-radius: 12px;
             text-decoration: none;
-            padding: 12px;
-            margin: 10px 0;
-            border-radius: 8px;
             font-weight: bold;
-            transition: 0.3s;
+            font-size: 15px;
+            transition: all 0.3s ease;
         }
         .btn-insta {
             background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+            box-shadow: 0 5px 15px rgba(220, 39, 67, 0.3);
         }
         .btn-phone {
-            background: #007bff;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            opacity: 0.95;
         }
     </style>
 </head>
 <body>
     <div class="card">
+        <div class="avatar">
+            <i class="fa-solid fa-user"></i>
+        </div>
         <h1>محمد قربانی</h1>
-        <p>به صفحه اختصاصی من خوش آمدید</p>
+        <p>صفحه ارتباطی اختصاصی</p>
         
-        <a href="https://instagram.com/Mohammad.ghorbani_org2625" class="btn btn-insta" target="_blank">صفحه اینستاگرام</a>
-        <a href="tel:09028390846" class="btn btn-phone">تماس مستقیم</a>
+        <a href="https://instagram.com/Mohammad.ghorbani_org2625" class="btn btn-insta" target="_blank">
+            <i class="fa-brands fa-instagram" style="font-size: 20px;"></i>
+            صفحه اینستاگرام
+        </a>
+        
+        <a href="tel:09028390846" class="btn btn-phone">
+            <i class="fa-solid fa-phone" style="font-size: 18px;"></i>
+            تماس مستقیم
+        </a>
     </div>
 </body>
 </html>
