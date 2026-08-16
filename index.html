@@ -6,96 +6,34 @@
     <title>محمد قربانی | کارت ویزیت دیجیتال</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        .card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 24px;
-            padding: 35px 25px;
-            width: 100%;
-            max-width: 380px;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        }
-        .avatar {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            margin: 0 auto 15px;
-            object-fit: cover;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-        }
-        h1 {
-            color: #ffffff;
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-        p {
-            color: #b3b3b3;
-            font-size: 13px;
-            margin-bottom: 25px;
-        }
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            width: 100%;
-            padding: 14px;
-            margin-bottom: 15px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 15px;
-            transition: all 0.3s ease;
-        }
-        .btn-insta {
-            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-            color: white;
-            box-shadow: 0 5px 15px rgba(220, 39, 67, 0.3);
-        }
-        .btn-phone {
-            background: #25d366;
-            color: white;
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
-        }
-        .btn:hover {
-            transform: translateY(-3px);
-            opacity: 0.95;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        body { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 20px; }
+        .card { background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 24px; padding: 35px 25px; width: 100%; max-width: 360px; text-align: center; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); }
+        .avatar { width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 15px; object-fit: cover; border: 3px solid rgba(255, 255, 255, 0.4); }
+        h1 { color: #ffffff; font-size: 24px; margin-bottom: 5px; }
+        p { color: #cccccc; font-size: 14px; margin-bottom: 25px; }
+        .btn { display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; padding: 14px; margin-bottom: 12px; border-radius: 12px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; }
+        .btn-green { background: #25d366; color: #000; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3); }
+        .btn:hover { transform: translateY(-3px); opacity: 0.9; }
     </style>
 </head>
 <body>
     <div class="card">
         <img src="profile.jpg" alt="محمد قربانی" class="avatar">
         <h1>محمد قربانی</h1>
-        <p>صفحه ارتباطی اختصاصی</p>
+        <p>مدیریت و بازرگانی</p>
         
         <a href="https://instagram.com/Mohammad.ghorbani_org2625" class="btn btn-insta" target="_blank">
-            <i class="fa-brands fa-instagram" style="font-size: 20px;"></i>
-            صفحه اینستاگرام
+            <i class="fa-brands fa-instagram"></i> اینستاگرام
         </a>
         
-        <a href="tel:09028390846" class="btn btn-phone">
-            <i class="fa-solid fa-phone" style="font-size: 18px;"></i>
-            تماس مستقیم
+        <a href="tel:09028390846" class="btn btn-green">
+            <i class="fa-solid fa-phone"></i> تماس مستقیم
+        </a>
+        
+        <a href="https://wa.me/989028390846" class="btn btn-green">
+            <i class="fa-brands fa-whatsapp"></i> واتساپ
         </a>
     </div>
 </body>
