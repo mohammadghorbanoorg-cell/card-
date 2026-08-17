@@ -62,7 +62,6 @@
             color: white;
             font-weight: bold;
             box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-            cursor: pointer;
         }
 
         .btn-content { display: flex; flex-direction: column; align-items: center; flex-grow: 1; }
@@ -82,8 +81,8 @@
         <h1>پرشین فیلم</h1>
         <p>کانال و راه ارتباطی رسمی</p>
         
-        <!-- دکمه تلگرام همراه با لینک مستقیم اپلیکیشن -->
-        <a href="tg://resolve?domain=farjafarin" onclick="openChannel(event)" class="btn btn-telegram">
+        <!-- این آدرس میانبر سیستم‌عامل برای باز کردن مستقیم تلگرام است -->
+        <a href="https://t.me/share/url?url=https://t.me/farjafarin" class="btn btn-telegram" target="_blank">
             <i class="fa-brands fa-telegram"></i>
             <div class="btn-content">
                 <span class="btn-title">ورود به کانال تلگرام</span>
@@ -100,18 +99,6 @@
         </a>
     </div>
 
-    <script>
-        function openChannel(e) {
-            e.preventDefault();
-            // تلاش برای باز کردن مستقیم اپلیکیشن تلگرام
-            window.location.href = "tg://resolve?domain=farjafarin";
-            
-            // پشتیبان: اگر اپلیکیشن واکنش نداد، بعد از نیم ثانیه لینک وب باز شود
-            setTimeout(function() {
-                window.location.href = "https://t.me/farjafarin";
-            }, 500);
-        }
-    </script>
-
 </body>
 </html>
+
