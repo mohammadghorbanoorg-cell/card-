@@ -9,8 +9,9 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: #0b0f19; background-image: radial-gradient(circle at 50% 0%, #1e2640, #0b0f19); min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 20px; }
         
+        /* پس‌زمینه کارت: آبی فیروزه‌ای */
         .card { 
-            background: linear-gradient(145deg, rgba(16, 185, 129, 0.85), rgba(6, 182, 212, 0.9)); 
+            background: linear-gradient(145deg, #10b981, #06b6d4); 
             backdrop-filter: blur(20px); 
             border: 1px solid rgba(255, 255, 255, 0.2); 
             border-radius: 28px; 
@@ -18,34 +19,33 @@
             width: 100%; 
             max-width: 360px; 
             text-align: center; 
-            box-shadow: 0 25px 50px -12px rgba(6, 182, 212, 0.35); 
+            box-shadow: 0 25px 50px -12px rgba(6, 182, 212, 0.5); 
         }
 
-        .profile-img { width: 110px; height: 110px; border-radius: 50%; border: 3px solid #ffffff; object-fit: cover; margin-bottom: 15px; box-shadow: 0 0 20px rgba(255, 255, 255, 0.4); }
-        h1 { color: #ffffff; font-size: 24px; font-weight: 700; margin-bottom: 8px; text-shadow: 0 2px 4px rgba(0,0,0,0.2); }
-        .tagline { color: #f0fdf4; font-size: 13px; font-weight: 600; margin-bottom: 12px; }
-        .quote { color: #ffffff; font-size: 13px; font-style: italic; line-height: 1.6; margin-bottom: 25px; background: rgba(0, 0, 0, 0.15); padding: 10px 15px; border-radius: 12px; border-right: 3px solid #ffffff; text-align: right; }
+        /* تصویر */
+        .profile-img { width: 110px; height: 110px; border-radius: 50%; border: 4px solid #ffffff; object-fit: cover; margin-bottom: 15px; box-shadow: 0 0 20px rgba(0,0,0,0.2); }
+        h1 { color: #ffffff; font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+        .tagline { color: #e0f7fa; font-size: 13px; font-weight: 600; margin-bottom: 12px; }
+        .quote { color: #ffffff; font-size: 13px; font-style: italic; line-height: 1.6; margin-bottom: 25px; background: rgba(0, 0, 0, 0.1); padding: 10px 15px; border-radius: 12px; border-right: 3px solid #ffffff; text-align: right; }
         
         .links-container { display: flex; flex-direction: column; gap: 12px; }
         
-        /* استایل دکمه‌ها بدون خاصیت کلیک */
-        .btn-box { display: flex; align-items: center; justify-content: space-between; padding: 13px 18px; border-radius: 16px; color: white; font-weight: 600; border: none; width: 100%; margin-bottom: 0; }
+        /* دکمه‌ها */
+        .btn-box { display: flex; align-items: center; justify-content: space-between; padding: 13px 18px; border-radius: 16px; color: white; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); width: 100%; text-decoration: none; background: rgba(0,0,0,0.1); transition: 0.3s; }
+        .btn-box:hover { background: rgba(0,0,0,0.2); }
         
-        .btn-instagram { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); text-decoration: none; }
-        .btn-hashemieh { background: linear-gradient(135deg, #111827, #1f2937); border: 1px solid rgba(255, 255, 255, 0.2); }
-        .btn-sajjad { background: linear-gradient(135deg, #0284c7, #0f172a); border: 1px solid rgba(255, 255, 255, 0.2); }
-        .btn-khayyam { background: linear-gradient(135deg, #0f766e, #042f2e); border: 1px solid rgba(255, 255, 255, 0.2); }
-        .btn-ahmadabad { background: linear-gradient(135deg, #9f1239, #4c0519); border: 1px solid rgba(255, 255, 255, 0.2); }
-        .btn-owner { background: linear-gradient(135deg, #e11d48, #be123c); text-decoration: none; }
+        .btn-instagram { background: linear-gradient(135deg, #833ab4, #fd1d1d); }
+        .btn-owner { background: linear-gradient(135deg, #e11d48, #be123c); }
         
         .btn-content { display: flex; flex-direction: column; align-items: center; flex-grow: 1; }
         .btn-title { font-size: 14px; }
-        .btn-sub { font-size: 11px; opacity: 0.85; margin-top: 2px; direction: ltr; }
+        .btn-sub { font-size: 11px; opacity: 0.9; margin-top: 2px; direction: ltr; }
     </style>
 </head>
 <body>
 
     <div class="card">
+        <!-- اضافه شدن عکس -->
         <img src="https://raw.githubusercontent.com/mohammadghorbanoorg-cell/card-/main/1786891565124.png" alt="عمو تیمور" class="profile-img">
         
         <h1>عمو تیمور</h1>
@@ -53,19 +53,17 @@
         <div class="quote">"عموتیمور املتی نیست ، ی سبکه"</div>
 
         <div class="links-container">
-            <!-- اینستاگرام -->
             <a href="https://instagram.com/amooteimoor" class="btn-box btn-instagram" target="_blank">
                 <i class="fa-brands fa-instagram"></i>
                 <div class="btn-content"><span class="btn-title">صفحه اینستاگرام</span><span class="btn-sub">@amooteimoor</span></div>
             </a>
             
             <!-- شعب (فقط نمایش) -->
-            <div class="btn-box btn-hashemieh"><i class="fa-solid fa-crown"></i><div class="btn-content"><span class="btn-title">شعبه هاشمیه</span><span class="btn-sub">۰۵۱-۳۸۸۰۰۲۲۸</span></div></div>
-            <div class="btn-box btn-sajjad"><i class="fa-solid fa-gem"></i><div class="btn-content"><span class="btn-title">شعبه سجاد</span><span class="btn-sub">۰۵۱-۳۶۱۱۰۰۱۱</span></div></div>
-            <div class="btn-box btn-khayyam"><i class="fa-solid fa-location-dot"></i><div class="btn-content"><span class="btn-title">شعبه خیام جنوبی</span><span class="btn-sub">۰۵۱-۳۷۶۶۴۴۴۲</span></div></div>
-            <div class="btn-box btn-ahmadabad"><i class="fa-solid fa-store"></i><div class="btn-content"><span class="btn-title">شعبه احمدآباد</span><span class="btn-sub">۰۵۱-۳۸۴۱۰۱۶۹</span></div></div>
+            <div class="btn-box"><i class="fa-solid fa-crown"></i><div class="btn-content"><span class="btn-title">شعبه هاشمیه</span><span class="btn-sub">۰۵۱-۳۸۸۰۰۲۲۸</span></div></div>
+            <div class="btn-box"><i class="fa-solid fa-gem"></i><div class="btn-content"><span class="btn-title">شعبه سجاد</span><span class="btn-sub">۰۵۱-۳۶۱۱۰۰۱۱</span></div></div>
+            <div class="btn-box"><i class="fa-solid fa-location-dot"></i><div class="btn-content"><span class="btn-title">شعبه خیام جنوبی</span><span class="btn-sub">۰۵۱-۳۷۶۶۴۴۴۲</span></div></div>
+            <div class="btn-box"><i class="fa-solid fa-store"></i><div class="btn-content"><span class="btn-title">شعبه احمدآباد</span><span class="btn-sub">۰۵۱-۳۸۴۱۰۱۶۹</span></div></div>
             
-            <!-- تماس -->
             <a href="tel:+989157500072" class="btn-box btn-owner"><i class="fa-solid fa-user-tie"></i><div class="btn-content"><span class="btn-title">تماس مستقیم با عمو</span><span class="btn-sub">۰۹۱۵ ۷۵۰ ۰۰۷۲</span></div></a>
         </div>
     </div>
