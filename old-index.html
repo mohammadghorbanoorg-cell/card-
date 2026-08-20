@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amooteimoor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0b0f19; background-image: radial-gradient(circle at 50% 0%, #1e2640, #0b0f19); min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 20px; }
+        .card { background: rgba(21, 29, 46, 0.85); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 28px; padding: 35px 25px; width: 100%; max-width: 360px; text-align: center; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7); }
+        .profile-img { width: 110px; height: 110px; border-radius: 50%; border: 3px solid #d4af37; object-fit: cover; margin-bottom: 15px; box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
+        h1 { color: #ffffff; font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+        .tagline { color: #d4af37; font-size: 13px; font-weight: 600; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+        .quote { color: #cbd5e1; font-size: 13px; font-style: italic; line-height: 1.6; margin-bottom: 25px; background: rgba(255, 255, 255, 0.03); padding: 10px 15px; border-radius: 12px; border-left: 3px solid #d4af37; text-align: left; }
+        .links-container { display: flex; flex-direction: column; gap: 12px; }
+        .btn { display: flex; align-items: center; justify-content: space-between; padding: 13px 18px; border-radius: 16px; text-decoration: none; color: white; font-weight: 600; transition: transform 0.2s; border: none; cursor: pointer; width: 100%; }
+        
+        /* Buttons Luxury Styles */
+        .btn-telegram { background: linear-gradient(135deg, #1d72b8, #0f4c81); }
+        .btn-instagram { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); }
+        .btn-hashemieh { background: linear-gradient(135deg, #bf953f, #aa771c); color: #000; font-weight: 700; }
+        .btn-sajjad { background: linear-gradient(135deg, #059669, #022c22); border: 1px solid rgba(16, 185, 129, 0.3); }
+        .btn-khayyam { background: linear-gradient(135deg, #0284c7, #0f172a); border: 1px solid rgba(56, 189, 248, 0.3); }
+        .btn-ahmadabad { background: linear-gradient(135deg, #9f1239, #4c0519); border: 1px solid rgba(244, 63, 94, 0.3); }
+        .btn-owner { background: linear-gradient(135deg, #e11d48, #be123c); }
+        
+        .btn-content { display: flex; flex-direction: column; align-items: center; flex-grow: 1; }
+        .btn-title { font-size: 13px; }
+        .btn-sub { font-size: 10px; opacity: 0.85; margin-top: 2px; }
+
+        /* Modal */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px); display: flex; justify-content: center; align-items: center; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 1000; padding: 20px; }
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+        .modal-card { background: #111827; border-radius: 24px; padding: 25px 20px; max-width: 340px; width: 100%; position: relative; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9); text-align: center; }
+        .modal-title { font-size: 18px; font-weight: 700; margin-bottom: 15px; }
+        .modal-address { color: #e2e8f0; font-size: 14px; line-height: 1.6; background: rgba(255, 255, 255, 0.03); padding: 14px; border-radius: 12px; margin-bottom: 20px; border-left: 3px solid currentColor; text-align: left; }
+        .modal-call-btn { display: flex; align-items: center; justify-content: center; gap: 10px; color: white; text-decoration: none; padding: 12px; border-radius: 14px; font-weight: 700; }
+        .close-btn { position: absolute; top: 12px; right: 12px; background: rgba(255, 255, 255, 0.1); color: #94a3b8; border: none; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <img src="https://raw.githubusercontent.com/mohammadghorbanoorg-cell/card-/main/1786891565124.png" alt="Amooteimoor" class="profile-img">
+        <h1>Amooteimoor</h1>
+        <div class="tagline">Persian Food • Humble & Deep</div>
+        <div class="quote">"Amooteimoor isn't just omelette, it's a lifestyle."</div>
+
+        <div class="links-container">
+            <a href="https://t.me/farjafarin" class="btn btn-telegram" target="_blank">
+                <i class="fa-brands fa-telegram"></i>
+                <div class="btn-content"><span class="btn-title">Telegram Channel</span><span class="btn-sub">@farjafarin</span></div>
+            </a>
+            <a href="https://instagram.com/amooteimoor" class="btn btn-instagram" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+                <div class="btn-content"><span class="btn-title">Instagram</span><span class="btn-sub">@amooteimoor</span></div>
+            </a>
+            <button onclick="openModal('m1')" class="btn btn-hashemieh"><i class="fa-solid fa-crown"></i><div class="btn-content"><span class="btn-title">Hashemieh Branch</span><span class="btn-sub">051-38800228</span></div></button>
+            <button onclick="openModal('m2')" class="btn btn-sajjad"><i class="fa-solid fa-gem"></i><div class="btn-content"><span class="btn-title">Sajjad Branch</span><span class="btn-sub">051-36110011</span></div></button>
+            <button onclick="openModal('m3')" class="btn btn-khayyam"><i class="fa-solid fa-location-dot"></i><div class="btn-content"><span class="btn-title">Khayyam Branch</span><span class="btn-sub">051-37664442</span></div></button>
+            <button onclick="openModal('m4')" class="btn btn-ahmadabad"><i class="fa-solid fa-store"></i><div class="btn-content"><span class="btn-title">Ahmadabad Branch</span><span class="btn-sub">051-38410169</span></div></button>
+            <a href="tel:+989157500072" class="btn btn-owner"><i class="fa-solid fa-user-tie"></i><div class="btn-content"><span class="btn-title">Direct Contact</span><span class="btn-sub">+98 915 750 0072</span></div></a>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal-overlay" id="m1"><div class="modal-card"><button class="close-btn" onclick="closeModal('m1')"><i class="fa-solid fa-xmark"></i></button><div class="modal-title" style="color:#d4af37">Hashemieh Branch</div><div class="modal-address">Hashemieh 41/1, End of Malekian 12, Left side</div><a href="tel:05138800228" class="modal-call-btn" style="background:#bf953f">Call: 051-38800228</a></div></div>
+    <div class="modal-overlay" id="m2"><div class="modal-card"><button class="close-btn" onclick="closeModal('m2')"><i class="fa-solid fa-xmark"></i></button><div class="modal-title" style="color:#10b981">Sajjad Branch</div><div class="modal-address">Sajjad 19, End of Hamed Shomali 11</div><a href="tel:05136110011" class="modal-call-btn" style="background:#059669">Call: 051-36110011</a></div></div>
+    <div class="modal-overlay" id="m3"><div class="modal-card"><button class="close-btn" onclick="closeModal('m3')"><i class="fa-solid fa-xmark"></i></button><div class="modal-title" style="color:#38bdf8">Khayyam Branch</div><div class="modal-address">Khayyam 12, Opposite Zanbagh 2</div><a href="tel:05137664442" class="modal-call-btn" style="background:#0284c7">Call: 051-37664442</a></div></div>
+    <div class="modal-overlay" id="m4"><div class="modal-card"><button class="close-btn" onclick="closeModal('m4')"><i class="fa-solid fa-xmark"></i></button><div class="modal-title" style="color:#f43f5e">Ahmadabad Branch</div><div class="modal-address">Ahmadabad, End of Pastor 11, Right side, Near Moslem 12</div><a href="tel:05138410169" class="modal-call-btn" style="background:#be123c">Call: 051-38410169</a></div></div>
+
+    <script>
+        function openModal(id) { document.getElementById(id).classList.add('active'); }
+        function closeModal(id) { document.getElementById(id).classList.remove('active'); }
+    </script>
+</body>
+</html>
