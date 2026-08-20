@@ -9,32 +9,34 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: #0b0f19; background-image: radial-gradient(circle at 50% 0%, #1e2640, #0b0f19); min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 20px; }
         
-        /* پس‌زمینه کارت: آبی فیروزه‌ای */
+        /* کارت اصلی با تم تیره و شیشه‌ای */
         .card { 
-            background: linear-gradient(145deg, #10b981, #06b6d4); 
+            background: rgba(21, 29, 46, 0.85); 
             backdrop-filter: blur(20px); 
-            border: 1px solid rgba(255, 255, 255, 0.2); 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
             border-radius: 28px; 
             padding: 35px 25px; 
             width: 100%; 
             max-width: 360px; 
             text-align: center; 
-            box-shadow: 0 25px 50px -12px rgba(6, 182, 212, 0.5); 
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7); 
         }
 
-        /* تصویر */
-        .profile-img { width: 110px; height: 110px; border-radius: 50%; border: 4px solid #ffffff; object-fit: cover; margin-bottom: 15px; box-shadow: 0 0 20px rgba(0,0,0,0.2); }
+        .profile-img { width: 110px; height: 110px; border-radius: 50%; border: 3px solid #d4af37; object-fit: cover; margin-bottom: 15px; box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
         h1 { color: #ffffff; font-size: 24px; font-weight: 700; margin-bottom: 8px; }
-        .tagline { color: #e0f7fa; font-size: 13px; font-weight: 600; margin-bottom: 12px; }
-        .quote { color: #ffffff; font-size: 13px; font-style: italic; line-height: 1.6; margin-bottom: 25px; background: rgba(0, 0, 0, 0.1); padding: 10px 15px; border-radius: 12px; border-right: 3px solid #ffffff; text-align: right; }
+        .tagline { color: #d4af37; font-size: 13px; font-weight: 600; margin-bottom: 12px; }
+        .quote { color: #cbd5e1; font-size: 13px; font-style: italic; line-height: 1.6; margin-bottom: 25px; background: rgba(255, 255, 255, 0.03); padding: 10px 15px; border-radius: 12px; border-right: 3px solid #d4af37; text-align: right; }
         
         .links-container { display: flex; flex-direction: column; gap: 12px; }
         
-        /* دکمه‌ها */
-        .btn-box { display: flex; align-items: center; justify-content: space-between; padding: 13px 18px; border-radius: 16px; color: white; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); width: 100%; text-decoration: none; background: rgba(0,0,0,0.1); transition: 0.3s; }
-        .btn-box:hover { background: rgba(0,0,0,0.2); }
+        /* استایل دکمه‌ها (فقط نمایش) */
+        .btn-box { display: flex; align-items: center; justify-content: space-between; padding: 13px 18px; border-radius: 16px; color: white; font-weight: 600; width: 100%; text-decoration: none; margin-bottom: 0; border: none; }
         
-        .btn-instagram { background: linear-gradient(135deg, #833ab4, #fd1d1d); }
+        .btn-instagram { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); }
+        .btn-hashemieh { background: linear-gradient(135deg, #bf953f, #aa771c); color: #000; font-weight: 700; }
+        .btn-sajjad { background: linear-gradient(135deg, #059669, #022c22); border: 1px solid rgba(16, 185, 129, 0.3); }
+        .btn-khayyam { background: linear-gradient(135deg, #0284c7, #0f172a); border: 1px solid rgba(56, 189, 248, 0.3); }
+        .btn-ahmadabad { background: linear-gradient(135deg, #9f1239, #4c0519); border: 1px solid rgba(244, 63, 94, 0.3); }
         .btn-owner { background: linear-gradient(135deg, #e11d48, #be123c); }
         
         .btn-content { display: flex; flex-direction: column; align-items: center; flex-grow: 1; }
@@ -45,7 +47,6 @@
 <body>
 
     <div class="card">
-        <!-- اضافه شدن عکس -->
         <img src="https://raw.githubusercontent.com/mohammadghorbanoorg-cell/card-/main/1786891565124.png" alt="عمو تیمور" class="profile-img">
         
         <h1>عمو تیمور</h1>
@@ -58,11 +59,10 @@
                 <div class="btn-content"><span class="btn-title">صفحه اینستاگرام</span><span class="btn-sub">@amooteimoor</span></div>
             </a>
             
-            <!-- شعب (فقط نمایش) -->
-            <div class="btn-box"><i class="fa-solid fa-crown"></i><div class="btn-content"><span class="btn-title">شعبه هاشمیه</span><span class="btn-sub">۰۵۱-۳۸۸۰۰۲۲۸</span></div></div>
-            <div class="btn-box"><i class="fa-solid fa-gem"></i><div class="btn-content"><span class="btn-title">شعبه سجاد</span><span class="btn-sub">۰۵۱-۳۶۱۱۰۰۱۱</span></div></div>
-            <div class="btn-box"><i class="fa-solid fa-location-dot"></i><div class="btn-content"><span class="btn-title">شعبه خیام جنوبی</span><span class="btn-sub">۰۵۱-۳۷۶۶۴۴۴۲</span></div></div>
-            <div class="btn-box"><i class="fa-solid fa-store"></i><div class="btn-content"><span class="btn-title">شعبه احمدآباد</span><span class="btn-sub">۰۵۱-۳۸۴۱۰۱۶۹</span></div></div>
+            <div class="btn-box btn-hashemieh"><i class="fa-solid fa-crown"></i><div class="btn-content"><span class="btn-title">شعبه هاشمیه</span><span class="btn-sub">۰۵۱-۳۸۸۰۰۲۲۸</span></div></div>
+            <div class="btn-box btn-sajjad"><i class="fa-solid fa-gem"></i><div class="btn-content"><span class="btn-title">شعبه سجاد</span><span class="btn-sub">۰۵۱-۳۶۱۱۰۰۱۱</span></div></div>
+            <div class="btn-box btn-khayyam"><i class="fa-solid fa-location-dot"></i><div class="btn-content"><span class="btn-title">شعبه خیام جنوبی</span><span class="btn-sub">۰۵۱-۳۷۶۶۴۴۴۲</span></div></div>
+            <div class="btn-box btn-ahmadabad"><i class="fa-solid fa-store"></i><div class="btn-content"><span class="btn-title">شعبه احمدآباد</span><span class="btn-sub">۰۵۱-۳۸۴۱۰۱۶۹</span></div></div>
             
             <a href="tel:+989157500072" class="btn-box btn-owner"><i class="fa-solid fa-user-tie"></i><div class="btn-content"><span class="btn-title">تماس مستقیم با عمو</span><span class="btn-sub">۰۹۱۵ ۷۵۰ ۰۰۷۲</span></div></a>
         </div>
