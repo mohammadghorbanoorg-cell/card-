@@ -6,17 +6,21 @@
     <title>آرایشگاه سید | Seyed Barber</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Tahoma', sans-serif; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Tahoma', sans-serif; -webkit-tap-highlight-color: transparent; }
         body { background: #0a0a0a; background-image: radial-gradient(circle at top, #1f1a08 0%, #050505 100%); color: #fff; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px 15px; }
-        .card { width: 100%; max-width: 380px; background: rgba(20, 20, 20, 0.85); border: 1px solid rgba(212, 175, 55, 0.4); border-radius: 24px; padding: 35px 25px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.8); }
-        .avatar { width: 90px; height: 90px; border-radius: 50%; background: #151515; border: 2px solid #d4af37; display: flex; align-items: center; justify-content: center; color: #d4af37; font-size: 38px; margin: 0 auto 15px auto; }
-        h1 { color: #f3e5ab; font-size: 22px; margin-bottom: 6px; }
+        .card { width: 100%; max-width: 380px; background: rgba(20, 20, 20, 0.85); backdrop-filter: blur(10px); border: 1px solid rgba(212, 175, 55, 0.4); border-radius: 24px; padding: 35px 25px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.8); position: relative; }
+        .avatar { width: 90px; height: 90px; border-radius: 50%; background: #151515; border: 2px solid #d4af37; display: flex; align-items: center; justify-content: center; color: #d4af37; font-size: 38px; margin: 0 auto 15px auto; box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); }
+        h1 { color: #f3e5ab; font-size: 22px; margin-bottom: 6px; font-weight: bold; }
         .bio { color: #8a8a8a; font-size: 13px; margin-bottom: 25px; }
         .btn-list { display: flex; flex-direction: column; gap: 14px; }
-        .btn { display: flex; align-items: center; justify-content: space-between; background: rgba(30, 30, 30, 0.8); border: 1px solid rgba(212, 175, 55, 0.3); padding: 15px 18px; border-radius: 16px; color: #f0f0f0; text-decoration: none; font-size: 14px; }
+        .btn { display: flex; align-items: center; justify-content: space-between; background: rgba(30, 30, 30, 0.8); border: 1px solid rgba(212, 175, 55, 0.3); padding: 15px 18px; border-radius: 16px; color: #f0f0f0; text-decoration: none; font-size: 14px; transition: all 0.3s ease; }
+        .btn:active, .btn:hover { background: rgba(212, 175, 55, 0.15); border-color: #d4af37; transform: translateY(-2px); }
         .btn-left { display: flex; align-items: center; gap: 12px; }
         .btn i.icon { font-size: 18px; color: #d4af37; width: 24px; }
-        .footer-text { margin-top: 25px; font-size: 11px; color: #555; }
+        .btn-primary { background: linear-gradient(135deg, #d4af37 0%, #aa820a 100%); color: #000; font-weight: bold; border: none; }
+        .btn-primary .btn-left i.icon { color: #000; }
+        .btn-primary:active, .btn-primary:hover { background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 100%); border: none; }
+        .footer-text { margin-top: 25px; font-size: 11px; color: #555; letter-spacing: 1px; }
     </style>
 </head>
 <body>
@@ -24,24 +28,27 @@
         <div class="avatar"><i class="fa-solid fa-scissors"></i></div>
         <h1>آرایشگاه سید</h1>
         <p class="bio">Barber Seyed62 | استایل و اصلاح تخصصی</p>
+        
         <div class="btn-list">
-            <a href="tel:09150000000" class="btn">
+            <!-- ذخیره مخاطب -->
+            <a href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3A%D8%B3%DB%8C%D8%AF%3B%D8%A2%D8%B1%D8%A2%DB%8C%D8%B4%DA%AF%D8%A7%D9%87%3B%3B%3B%0AFN%3A%D8%A2%D8%B1%D8%A2%DB%8C%D8%B4%DA%AF%D8%A7%D9%87%20%D8%B3%DB%8C%D8%AF%0ATEL%3BTYPE%3DCELL%3A09159756257%0AEND%3AVCARD" class="btn btn-primary">
+                <div class="btn-left"><i class="fa-solid fa-user-plus icon"></i><span>ذخیره در مخاطبین</span></div>
+                <i class="fa-solid fa-chevron-left" style="font-size: 11px; color: #000;"></i>
+            </a>
+
+            <!-- تماس مستقیم -->
+            <a href="tel:09159756257" class="btn">
                 <div class="btn-left"><i class="fa-solid fa-phone icon"></i><span>تماس مستقیم</span></div>
                 <i class="fa-solid fa-chevron-left" style="font-size: 11px; color: #666;"></i>
             </a>
-            <a href="https://instagram.com" target="_blank" class="btn">
+
+            <!-- اینستاگرام -->
+            <a href="https://instagram.com/barber_seyed62" target="_blank" class="btn">
                 <div class="btn-left"><i class="fa-brands fa-instagram icon"></i><span>پیج اینستاگرام</span></div>
                 <i class="fa-solid fa-chevron-left" style="font-size: 11px; color: #666;"></i>
             </a>
-            <a href="https://wa.me/989150000000" target="_blank" class="btn">
-                <div class="btn-left"><i class="fa-brands fa-whatsapp icon"></i><span>پیام در واتساپ</span></div>
-                <i class="fa-solid fa-chevron-left" style="font-size: 11px; color: #666;"></i>
-            </a>
-            <a href="https://neshan.org" target="_blank" class="btn">
-                <div class="btn-left"><i class="fa-solid fa-location-dot icon"></i><span>مسیریابی آدرس</span></div>
-                <i class="fa-solid fa-chevron-left" style="font-size: 11px; color: #666;"></i>
-            </a>
         </div>
+
         <div class="footer-text">TOUCH TO CONNECT • NFC CARD</div>
     </div>
 </body>
